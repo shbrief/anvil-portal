@@ -21,8 +21,7 @@ import * as DOMService from "../utils/dom.service";
 // Styles
 import compStyles from "./layout.module.css";
 
-
-let classNames = require('classnames');
+let classNames = require("classnames");
 
 class Layout extends React.Component {
 
@@ -81,7 +80,7 @@ class Layout extends React.Component {
                     <Header onMenuOpen={this.onMenuOpen.bind(this)}/>
                     <Main bannerHeight={this.state.bannerHeight} docPath={docPath} homePage={homePage} noSpy={noSpy}>{children}</Main>
                     <BannerPrivacy onBannerHeightChange={this.onBannerHeightChange.bind(this)}/>
-                    <Footer/>
+                    <Footer homePage={homePage}/>
                     <div id="portal"/>
                 </div>
             </div>

@@ -55,7 +55,7 @@ export function calculateNavMaxHeight(bannerHeight, element) {
     }
 
     // Calculate the side nav style "maxHeight", taking into account the sticky top position at 100px,
-    // the section padding 60px and the footer 96px and the height of the privacy banner (if showing).
+    // the section padding 60px and the footer 362px and the height of the privacy banner (if showing).
     // When there is main content overflow, the maxHeight should allow an nav/outline of length equal to
     // available screen height.  The nav/outline will stretch taking up the remaining screen height, from the
     // sticky top position at 100px, until the content approaches end of scrolling.
@@ -73,7 +73,7 @@ export function calculateNavMaxHeight(bannerHeight, element) {
 
     if ( calculatePixelPositionFromEnd() < 160 ) {
 
-        elementHeight = document.body.clientHeight - window.scrollY - 100 - 60 - 96 - bannerHeight;
+        elementHeight = document.body.clientHeight - window.scrollY - 100 - 60 - 362 - bannerHeight;
     }
     else {
 

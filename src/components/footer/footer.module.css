@@ -7,119 +7,343 @@
 @import "../../styles/vars.module.css";
 
 /* Footer */
+/* Footer - container */
 .footer {
     background: var(--shade-dark);
-    padding: 32px 0;
+    padding: 60px 0;
     position: relative; /* Required for outline component */
     z-index: 2; /* Required for 404 page */
 }
 
 /* Footer container */
-.footer > div {
+.footer .container {
     align-items: center;
-    display: flex;
+    box-sizing: content-box;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+/* Footer container - home page */
+.footer.centre .container {
+    box-sizing: border-box;
+    max-width: 750px;
 }
 
 /* Logos */
-.footer .logos {
-    align-items: center;
-    display: flex;
-    height: 64px;
+/* Logos - container */
+.logos {
+    padding-bottom: 24px;
+    position: relative; /* Positions dashed line */
+    width: 100%;
 }
 
-.footer .logos img {
-    height: 18px;
+/* Divide - logo, social */
+.logos::after, .socials::before {
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+/* Logo divide */
+.logos::after {
+    background: repeating-linear-gradient(90deg, var(--accent-blue-light), var(--accent-blue-light) 4px, transparent 4px, transparent 8px);
+    bottom: 0;
+}
+
+/* Logo container */
+.logos > div {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+/* Logo - nhgri */
+.logos .nhgri {
+    box-sizing: content-box;
+    display: block;
+    padding-bottom: 24px;
+}
+
+/* Logo - nhgri, nih */
+.logos .nhgri, .logos .nih {
+    height: 28px;
+}
+
+/* Logo - hhs, usa.gov */
+.logos .hhs, .logos .usaGov {
+    height: 40px;
+}
+
+/* Logo - hhs */
+.logos .hhs {
+    padding: 0 24px;
+}
+
+/* Logo */
+.logos img {
     margin: 0;
 }
 
-/* Socials */
-.footer .socials {
-    display: flex;
-    flex-wrap: wrap;
+/* Directory */
+/* Directory - container */
+.directory {
+    flex: 1;
+    padding: 30px 0 24px;
+    width: 100%;
 }
 
-/* Socials - link/social */
-.footer .socials a {
-    color: var(--white);
-    flex: none;
+/* Content container */
+.directory .content {
+    margin: 0 auto;
+    max-width: 760px;
+    width: 100%;
+}
+
+/* Flex */
+/* Content block - column */
+.directory .content > div {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
-/* Socials - social only */
-.footer .socials a:not(.link) {
-    flex-basis: calc(100% / 3);
-    padding: 24px 0 0;
+/* Content block - first row */
+.directory .content > div:first-of-type {
+    margin-bottom: 6px;
 }
 
-/* Socials - link only */
-.footer .socials .link {
-    flex-basis: 100%;
+/* Lists */
+.directory ul {
+    list-style: none;
+}
+
+.directory ul, .directory ul li {
     margin: 0;
-    padding: 4px 0;
+}
+
+/* Lists */
+.directory ul {
+    margin-bottom: 12px;
+}
+
+.directory div div:last-child ul {
+    margin-bottom: 0;
+}
+
+/* Link (list label and unlisted label) */
+.directory div > a {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+}
+
+/* Link (list item) */
+.directory ul li a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+/* Link (list label only) - e.g. about */
+.directory .content > div > div a {
+    padding: 2px 0;
+}
+
+/* Link (unlisted label) - e.g. tools, news, events, faq */
+.directory .content > div > a {
+    padding: 8px 0;
+}
+
+/* Link (list item) - hide partial text */
+.directory ul li a span {
+    display: none;
+}
+
+/* List (all - list label, unlisted label and list item) */
+.directory a {
+    color: white;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Socials */
+/* Socials - container */
+.socials {
+    align-items: center;
+    padding-top: 24px;
+    position: relative; /* Positions divide */
+    width: fit-content;
+}
+
+/* Socials divide */
+.socials::before {
+    background: repeating-linear-gradient(90deg, var(--accent-mustard), var(--accent-mustard) 4px, transparent 4px, transparent 8px);
+    top: 0;
+}
+
+/* Socials - link/social */
+.socials a {
+    color: var(--white);
+    flex: none;
+    line-height: 0;
+}
+
+.socials a:nth-of-type(even) {
+    padding: 0 24px;
 }
 
 /* GitHub image */
-.footer .socials img {
-    height: 20px;
+.socials img {
+    height: 24px;
     margin: 0;
 }
 
-/**
- * Large handset small +
- * https://material.io/design/layout/responsive-layout-grid.html#breakpoints
- */
-@media screen and (min-width: 400px) {
-
-    /* Logos */
-    .footer .logos img {
-        height: 24px;
-    }
-    
-    /* Social icon */
-    .footer .socials img {
-        height: 24px;
-    }
-}
-
-/**
- * Small +
- * https://material.io/design/layout/responsive-layout-grid.html#breakpoints
- */
 @media screen and (min-width: 600px) {
 
     /* Footer */
-    .footer {
-        padding: 0;
-    }
-
     /* Footer container */
-    .footer > div {
+    .footer .container {
+        align-items: flex-start;
+    }
+
+    /* Logos */
+    /* Logos - container */
+    .logos {
+        width: calc(100% / 3);
+    }
+
+    /* Logo container */
+    .logos > div {
+        margin: unset;
+        width: unset;
+    }
+
+    /* Logo - nhgri, nih */
+    .logos .nhgri, .logos .nih {
+        height: 25px;
+    }
+
+    /* Flex */
+    /* Content block - row */
+    .directory .content > div {
         flex-direction: row;
-    }
-
-    /* Socials */
-    .footer .socials {
-        align-items: center;
-        height: 96px;
-    }
-
-    /* Socials - link/social */
-    .footer .socials a:not(.link), .footer .socials .link {
-        flex-basis: unset;
-        padding: 0;
         text-align: left;
     }
 
-    /* Socials - link/social - excluding first */
-    .footer .socials a:not(:first-of-type) {
-        margin-left: 24px;
+    /* Content block */
+    .directory .content > div > div, .directory .content > div > a {
+        flex-basis: calc(100% / 3);
     }
 
-    /* Socials - social only */
-    .footer .socials a:not(.link) {
-        line-height: 0;
+    /* Lists */
+    .directory .content ul {
+        margin-bottom: 0;
+    }
+
+    /* Link (unlisted label) - e.g. tools, news, events, faq */
+    .directory .content > div > a {
+        padding: 4px 0;
     }
 }
 
+/**
+ * Large tablet portrait, large handset landscape, small window
+ */
+@media screen and (min-width: 720px) {
+
+    /* Logos */
+    /* Logo - nhgri, nih */
+    .logos .nhgri, .logos .nih {
+        height: 28px;
+    }
+}
+
+/**
+ * Large handset portrait, small handset landscape, extra small window
+ */
+@media screen and (min-width: 840px) {
+
+    /* Directory */
+    /* Link (list item) - show all list text e.g. "Requesting Data Access" */
+    .directory ul li a span {
+        display: inline;
+    }
+}
+
+/**
+ * Column row layout changes to row layout (left nav/content/outline), in addition to complimentary JS in scroll.service
+ */
+@media screen and (min-width: 1341px) {
+
+    /* Footer */
+    /* Footer container */
+    .footer:not(.centre) .container {
+        align-items: unset;
+        flex-direction: row;
+        margin: unset;
+        max-width: unset;
+    }
+
+    /* Logos */
+    /* Logos - container */
+    .footer:not(.centre) .logos {
+        width: 280px;
+    }
+
+    /* Logo divide - aligns with nav component */
+    .footer:not(.centre) .logos::after {
+        background: repeating-linear-gradient(0deg, var(--accent-blue-light), var(--accent-blue-light) 4px, transparent 4px, transparent 8px);
+        height: 100%;
+        left: unset;
+        right: 0;
+        width: 1px;
+    }
+
+    /* Directory */
+    /* Directory - container */
+    .footer:not(.centre) .directory {
+        margin: 0 auto;
+        max-width: 1240px;
+        padding: 0 40px;
+    }
+
+    /* Content container */
+    .footer:not(.centre) .directory .content {
+        margin: 0 auto 0 0;
+        max-width: 712px;
+        width: 100%;
+    }
+
+    /* Socials */
+    /* Socials - container */
+    .footer:not(.centre) .socials {
+        align-items: flex-start;
+        left: 1120px;
+        padding: 0 0 0 32px;
+        position: absolute;
+    }
+
+    /* Socials divide - aligns with outline component */
+    .footer:not(.centre) .socials::before {
+        background: repeating-linear-gradient(0deg, var(--accent-mustard), var(--accent-mustard) 4px, transparent 4px, transparent 8px);
+        height: 140px;
+        width: 1px;
+    }
+}
+
+/**
+ * Content and outline are centered, rather than left-aligned
+ */
+@media screen and (min-width: 1545px) {
+
+    /* Socials */
+    /* Socials - container */
+    .footer:not(.centre) .socials {
+        left: calc(50% + 349px); /* Aligns with outline component */
+    }
+}
