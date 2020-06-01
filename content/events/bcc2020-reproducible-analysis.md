@@ -5,8 +5,9 @@ date: "2020-07-18"
 description: "This training will lead users through the steps of performing reproducible genomic analysis at scale in the cloud with Dockstore and Terra."
 eventType: "Virtual Workshop"
 featured: true
-location: "West Training 6"
-time: "12:31 - 15:00 PT"
+location: "Virtual"
+registration: "https://bcc2020.github.io/Registration/"
+time: "12:31 - 15:00 PT, West Training 6"
 title: "Reproducible Analysis in the Cloud with Dockstore and Terra"
 ---
 

@@ -5,10 +5,10 @@ date: "2020-10-28"
 description: "Attendees will use AnVIL to launch Galaxy and create, modify, and execute a Galaxy Workflow for GWAS analysis to demonstrate batch processing in Galaxy"
 eventType: "Workshop"
 featured: true
-location: "San Diego Convention Center, 111 West Harbor Drive, San Diego, CA 92101"
+location: "San Diego Convention Center/111 West Harbor Drive/San Diego, CA 92101"
 subTitle: "GWAS Analysis with Galaxy on the Analysis Visualization Integrated Lab-space (AnVIL)"
 time: "07:15 - 08:45 PT"
-title: "GWAS Analysis with Galaxy in AnVIL"
+title: "GWAS Analysis with Galaxy on the Analysis Visualization Integrated Lab-space (AnVIL)"
 ---
 
 <event-hero></event-hero>

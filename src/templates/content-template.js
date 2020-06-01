@@ -62,7 +62,7 @@ query($slug: String!) {
         eventType
         featured
         location
-        subTitle
+        registration
         time
         title
       }

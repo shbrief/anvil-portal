@@ -7,7 +7,7 @@
 @import "../../styles/vars.module.css";
 
 /* Event hero <h6> 0 overline - mix of overline and <h3> styles */
-.eventHero h6 {
+.eventHero .overlineHeader {
     font-size: 20px;
     letter-spacing: 2px;
     line-height: 28px;
@@ -16,12 +16,67 @@
     white-space: nowrap;
 }
 
-/* Events - first event detail below event title - scoot up under title */
-.eventHero h1 + h5 {
-    margin-top: 0;
+/* Event meta (date, time, location, registration) */
+.eventHero .eventMeta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
 }
 
-/* Events - subsequent event details after first below event title - scoot together */
-.eventHero h5 + h5 {
-    margin-top: -8px;
+/* Four meta boxes - date, time, location, registration */
+.eventHero .eventMeta > div {
+    border-left: 2px solid var(--accent-blue-light);
+    padding-left: 8px;
+}
+
+/* Add margin below each meta except last */
+.eventHero .eventMeta > div:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+/* Date, Time, Location, Registration */
+.eventHero .eventMeta div h5 {
+    margin: 0; /* Remove default H5 margins */ 
+}
+
+/* Force line breaks in location */
+.eventHero .eventMeta div span {
+    display: block;
+}
+
+/* mdash */
+.eventHero .eventMeta .notSpecified {
+    color: var(--black34);
+}
+
+
+/**
+ * Small tablet portrait, medium handset landscape, small window
+ */
+@media screen and (min-width: 600px) {
+
+    /* Event meta (date, time, location, registration) */
+    .eventHero .eventMeta {
+        flex-flow: row wrap;
+    }
+
+    /* Four meta boxes - date, time, location, registration */
+    .eventHero .eventMeta > div {
+        flex-basis: 50%;
+        overflow: hidden;
+    }
+
+    /* Ellipses */
+    .eventHero .eventMeta > div p {
+        flex-basis: 50%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /* Remove margin below last row */
+    .eventHero .eventMeta > div:nth-child(n+3) {
+        margin-bottom: 0;
+    }
+
 }

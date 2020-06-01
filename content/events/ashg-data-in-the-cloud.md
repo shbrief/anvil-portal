@@ -5,7 +5,7 @@ date: "2020-10-31"
 description: "We will guide you through a research journey with the NHGRI Genomic Data Science Analysis, Visualization and Informatics Lab-space (AnVIL)."
 eventType: "Workshop"
 featured: true
-location: "San Diego Convention Center, 111 West Harbor Drive, San Diego, CA 92101"
+location: "San Diego Convention Center/111 West Harbor Drive/San Diego, CA 92101"
 time: "07:15 - 08:45 PT"
 title: "Find and Analyze Data in the Cloud with Gen3, Dockstore and Terra"
 ---

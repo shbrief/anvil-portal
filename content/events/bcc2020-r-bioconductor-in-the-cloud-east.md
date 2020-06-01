@@ -5,8 +5,9 @@ date: "2020-07-18"
 description: "This session introduces R / Bioconductor in the AnVIL cloud computing environment. We cover use of the cloud as a replacement to desktop-style computing."
 eventType: "Virtual Workshop"
 featured: true
-location: "East Training 4"
-time: "18:01 - 20:30 PT"
+location: "Virtual"
+registration: "https://bcc2020.github.io/Registration/"
+time: "18:01 - 20:30 PT, East Training 4"
 title: "R / Bioconductor in the Cloud - East Session"
 ---
 

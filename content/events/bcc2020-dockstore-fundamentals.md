@@ -5,8 +5,9 @@ date: "2020-07-17"
 description: "A hands-on workshop to train a beginner on the fundamental technologies used to create portable and reproducible workflows"
 eventType: "Virtual Workshop"
 featured: true
-location: "West Training 3"
-time: "12:31 - 15:00 PT"
+time: "12:31 - 15:00 PT, West Training 3"
+location: Virtual
+registration: "https://bcc2020.github.io/Registration/"
 title: "Dockstore Fundamentals: Introduction to Docker and Descriptors for Reproducible Analysis - West Session"
 ---
 

@@ -11,12 +11,14 @@ import React from "react";
 // Styles
 import compStyles from "./overline.module.css";
 
+let classNames = require("classnames");
+
 class Overline extends React.Component {
 
     render() {
-        const {children} = this.props;
+        const {headline, children} = this.props;
         return (
-            <div className={compStyles.overline}>
+            <div className={classNames(compStyles.overline, {[compStyles.heading]: headline})}>
                 {children}
             </div>
         );
