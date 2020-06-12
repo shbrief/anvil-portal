@@ -32,6 +32,7 @@ class EventHero extends React.Component {
                     <span>{conference}</span>
                     <span>{eventType}</span>
                 </Overline>
+                <h1 id={identifier}>{title}</h1>
                 <div className={compStyles.eventMeta}>
                     <div>
                         <h5>Date</h5>
@@ -59,7 +60,6 @@ class EventHero extends React.Component {
                         </div> :
                     null}
                 </div>
-                <h1 id={identifier}>{title}</h1>
             </div>
         );
     }
