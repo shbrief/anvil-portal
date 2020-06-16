@@ -127,6 +127,14 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-source-google-sheets',
+            options: {
+                spreadsheetId: '1i70zYp-FbClIGpPJBL5uZPBLsulyVZhUdAN7Z74jUGU',
+                worksheetTitle: 'Team Directory',
+                credentials: require('../anvil-credentials/staging-anvil-portal-b6b0e5f4447a.json')
+            }
+        },
+        {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
@@ -154,7 +162,8 @@ module.exports = {
                                 "style-guide-color-palette",
                                 "style-guide-download-logo",
                                 "style-guide-typography",
-                                "style-guide-typography-example"]
+                                "style-guide-typography-example",
+                                "working-group"]
                         }
                     },
                     {
