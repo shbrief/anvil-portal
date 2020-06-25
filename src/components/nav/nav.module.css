@@ -28,14 +28,14 @@
 /* Nav item */
 .sideNav li {
     color: var(--accent-blue-dark);
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     font-weight: 400;
     margin: 0; /* Override default li margin */
 }
 
 /* Nav item level 1 */
 .sideNav > ul > li {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
 }
 
