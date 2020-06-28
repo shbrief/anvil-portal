@@ -57,17 +57,41 @@
   path: "/events"
   position:
     location: "h"
-    order: 5
+    order: 4
   primaryLinks:
     - name: "Events"
       key: "/events/events"
       path: "/events"
+- name: "NCPI"
+  key: "ncpi"
+  path: "/ncpi"
+  position:
+    location: "h"
+    order: 9
+  primaryLinks:
+    - name: "NCPI - NIH Cloud Platforms Interoperability "
+      key: "/ncpi/ncpi"
+      path: "/ncpi"
+    - name: "Systems"
+      key: "/ncpi/systems"
+    - name: "Research Use Cases"
+      key: "/ncpi/research-use-cases"
+    - name: "Standards"
+      key: "/ncpi/standards"
+    - name: "Working Groups"
+      key: "/ncpi/working-groups/working-groups"
+      path: "/ncpi/working-groups"
+      secondaryLinks:
+        - name: "Systems Interoperation"
+          key: "/ncpi/working-groups/systems-interoperation-working-group"
+        - name: "FHIR"
+          key: "/ncpi/working-groups/fhir-working-group"
 - name: "FAQ"
   key: "faq"
   path: "/faq"
   position:
     location: "h"
-    order: 6
+    order: 8
   primaryLinks:
     - name: "FAQ"
       key: "/faq/faq"
@@ -131,7 +155,7 @@
   path: "/news"
   position:
     location: "h"
-    order: 4
+    order: 3
   primaryLinks:
     - name: "News"
       key: "/news"
@@ -160,7 +184,7 @@
   path: "/training"
   position:
     location: "h"
-    order: 3
+    order: 5
   primaryLinks:
     - name: "Training"
       key: "/training/training"
