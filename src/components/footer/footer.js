@@ -41,6 +41,7 @@ class Footer extends React.Component {
                         </div>
                     </div>
                     <div className={classNames(globalStyles.flex, compStyles.socials)}>
+                        <Link className={compStyles.link} to="/about">About</Link>
                         <Link className={compStyles.link} to="/help">Help</Link>
                         <Link className={compStyles.link} to="/privacy">Privacy</Link>
                         <a href="https://twitter.com/useAnVIL" rel="noopener noreferrer" target="_blank">

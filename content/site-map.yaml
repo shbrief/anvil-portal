@@ -3,9 +3,6 @@
 - name: "About"
   key: "about"
   path: "/about"
-  position:
-    location: "h"
-    order: 0
   primaryLinks:
     - name: "About"
       key: "/about/platform"
@@ -16,7 +13,40 @@
       key: "/about/working-groups"
     - name: "Funding and Oversight"
       key: "/about/funding-and-oversight"
-- name: "Contact"
+- name: "Overview"
+  key: "intro"
+  path: "/intro"
+  position:
+    location: "h"
+    order: 0
+  primaryLinks:
+    - name: "Introduction to AnVIL"
+      key: "/intro/intro"
+      path: "/intro"
+    - name: "Use Cases"
+      key: "/intro/use-cases"
+    - name: "Supported Analysis Tools"
+      key: "/intro/tools"
+      path: "/intro/tools"
+    - name: "Data Consortia"
+      key: "/intro/consortia"
+    - name: "Interoperating with Other Platforms"
+      key: "/intro/cloud-platform-interoperability"
+    - name: "Data Security Policy"
+      key: "/intro/data-security"
+    - name: "Costs"
+      key: "/intro/cloud-costs"
+- name: "Developers"
+  key: "developers"
+  path: "/developers"
+  position:
+    location: "h"
+    order: 7
+  primaryLinks:
+    - name: "Developers"
+      key: "/developers/developers"
+      path: "/developers"
+- name: "Feedback & Support"
   key: "contact"
   path: "/contact"
   position:
@@ -26,18 +56,16 @@
     - name: "Contact Us"
       key: "/contact/contact-us"
       path: "/contact"
-- name: "Data"
+- name: "Data Sets"
   key: "data"
   path: "/data"
   position:
     location: "h"
-    order: 1
+    order: 2
   primaryLinks:
     - name: "Data"
       key: "/data/data"
       path: "/data"
-    - name: "Consortia"
-      key: "/data/consortia"
     - name: "Requesting Data Access"
       key: "/data/requesting-data-access"
     - name: "Data Access Controls"
@@ -51,7 +79,7 @@
   path: "/events"
   position:
     location: "h"
-    order: 5
+    order: 6
   primaryLinks:
     - name: "Events"
       key: "/events/events"
@@ -59,9 +87,6 @@
 - name: "NCPI"
   key: "ncpi"
   path: "/ncpi"
-  position:
-    location: "h"
-    order: 9
   primaryLinks:
     - name: "NCPI Overview"
       key: "/ncpi/ncpi"
@@ -81,11 +106,8 @@
 - name: "FAQ"
   key: "faq"
   path: "/faq"
-  position:
-    location: "h"
-    order: 7
   primaryLinks:
-    - name: "FAQ"
+    - name: "Faq"
       key: "/faq/faq"
       path: "/faq"
       secondaryLinks:
@@ -145,16 +167,6 @@
       - name: "Typography Examples"
         key: "/guides/anvil-style-guide/typography-examples"
         path: "/anvil-style-guide/typography-examples"
-- name: "News"
-  key: "news"
-  path: "/news"
-  position:
-    location: "h"
-    order: 4
-  primaryLinks:
-    - name: "News"
-      key: "/news/news"
-      path: "/news"
 - name: "Privacy"
   key: "privacy"
   path: "/privacy"
@@ -162,29 +174,46 @@
     - name: ""
       key: "/privacy/privacy"
       path: "/privacy"
-- name: "Tools"
-  key: "tools"
-  path: "/tools"
-  position:
-    location: "h"
-    order: 2
-  primaryLinks:
-    - name: "Tools"
-      key: "/tools/tools"
-      path: "/tools"
 - name: "Training"
   key: "training"
   path: "/training"
   position:
     location: "h"
-    order: 3
+    order: 1
   primaryLinks:
-    - name: "Training"
-      key: "/training/training"
-      path: "/training"
-    - name: "Guides"
+    - name: "Getting Started"
       key: "/training/guides"
-    - name: "Featured Workspaces"
+      path: "/training"
+      secondaryLinks:
+         - name: "Setting up Your Account"
+           key: "/training/guides"
+           path: "/training"
+         - name: "Creating Your First Workspace"
+           key: "/training/guides"
+         - name: "Running Your First Analysis"
+           key: "/training/guides"
+           path: "/training"
+         - name: "Sharing Your Results"
+           key: "/training/guides"
+           path: "/training"
+         - name: "Finding Data in Gen3"
+           key: "/training/guides"
+           path: "/training"
+         - name: "Finding Data in Terra"
+           key: "/training/guides"
+           path: "/training"
+         - name: "Finding a Workflow in Dockstore"
+           key: "/training/guides"
+           path: "/training"
+    - name: "Tutorials"
       key: "/training/featured-workspaces"
+      secondaryLinks:
+         - name: "GWAS Pipeline Using HAIL"
+           key: "/training/guides"
+           path: "/training"
+         - name: "GATK Best Practices for Somatic Copy Number Variation"
+           key: "/training/guides"
+           path: "/training"
+
 #    - name: "Example Page"
 #      key: "/content-guide/example-page"

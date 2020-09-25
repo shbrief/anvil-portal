@@ -3,7 +3,7 @@ title: "Featured Workspaces"
 description: "The AnVIL project's featured workspaces demonstrate common genomic analysis pipelines deployed using data and tools available on AnVIL."
 ---
 
-#Featured Workspaces
+#Tutorial Workspaces
 
 The AnVIL project's featured workspaces demonstrate common genomic analysis pipelines deployed using data and tools available on AnVIL.
 
