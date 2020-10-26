@@ -206,7 +206,7 @@ export function switchDisplayColumnName(columnName) {
         case "consortium":
             return "Consortium";
         case "dataTypes":
-            return "Data Type";
+            return "Data Types";
         case "demographics":
             return "Demographics";
         case "diagnosis":

@@ -50,6 +50,7 @@ exports.createSchemaCustomization = ({actions}) => {
         id: ID!
         consentCodes: [RowCellValueTooltip]
         consentShortNames: [String]
+        dataTypes: [String]
         dbGapIdAccession: String!
         diseases: [String]
         gapId: GapId

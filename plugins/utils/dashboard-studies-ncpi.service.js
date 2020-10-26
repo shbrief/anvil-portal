@@ -11,6 +11,7 @@ const path = require("path");
 
 // App dependencies
 const {sortDataByDuoTypes} = require(path.resolve(__dirname, "./dashboard-sort.service.js"));
+const {buildJSONStudy} = require(path.resolve(__dirname, "./dashboard-source-json.service.js"));
 const {buildConsentCodes, buildGapId, buildXMLStudy, getConsentShortNames, getSubjectConsents} = require(path.resolve(__dirname, "./dashboard-study.service.js"));
 
 // Template variables
@@ -75,6 +76,9 @@ async function buildNCPIDashboardStudy(gapIdPlatform) {
     /* Get the db gap readiness studies and subject report, dictionary queries and study urls. */
     const {studyExchange, subjectDictionary, subjectReport, urls} = await buildXMLStudy(dbGapIdAccession);
 
+    /* Get any study related data from the ncpi JSON. */
+    const study = await buildJSONStudy(dbGapIdAccession);
+
     /* Assemble the study variables. */
     const consents = getSubjectConsents(subjectReport, subjectDictionary.variableConsentId, studyExchange.consentGroups);
     const consentCodes = buildConsentCodes(consents);
@@ -88,6 +92,7 @@ async function buildNCPIDashboardStudy(gapIdPlatform) {
     return {
         consentCodes: consentCodes,
         consentShortNames: consentShortNames,
+        dataTypes: study.dataTypes,
         dbGapIdAccession: dbGapIdAccession,
         diseases: diseases,
         gapId: gapId,

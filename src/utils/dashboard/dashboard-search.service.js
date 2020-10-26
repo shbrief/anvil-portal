@@ -145,7 +145,7 @@ export function getDashboardSetOfTerms(facetsByTerm) {
 /**
  * Returns a map object of term search value by term display where
  * - term display is the term value
- * - term search value is the term value, with white space, hyphens or brackets are changed to an underscore.
+ * - term search value is the term value, with white space, hyphens or brackets or slash are changed to an underscore.
  * e.g. "GTEx (v8)" returns "GTEx__v8_".
  *
  * @param facetsByTerm
@@ -158,7 +158,7 @@ export function getDashboardTermSearchValueByTermDisplay(facetsByTerm) {
     [...facetsByTerm.keys()].forEach(termDisplay => {
 
         /* Replace any white space, commas, hyphens or brackets with an underscore. */
-        const termSearchValue = termDisplay.replace(/(,|-|\s|\(|\))/g, "_");
+        const termSearchValue = termDisplay.replace(/(\/|,|-|\s|\(|\))/g, "_");
         termSearchValueByTermDisplay.set(termDisplay, termSearchValue);
     });
 

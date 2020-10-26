@@ -101,37 +101,40 @@ const getIndexFieldConsortiumName = function getIndexFieldConsortiumName(consort
 
 /**
  * Returns the dataTypes.
- * Facilitates the indexing of an array of data types into searchable checkbox values.
- * Replaces any white space or hyphens with an underscore.
+ * Facilitates the indexing of an array of data types into a searchable text or checkbox values.
+ * Replaces any white space, commas, hyphens or brackets, or slash with an underscore.
  *
  * @param dataTypes
- * @returns {string}
+ * @returns {Array}
  */
 const getIndexFieldDataTypes = function getIndexFieldDataTypes(dataTypes) {
 
     if ( dataTypes ) {
 
-        return dataTypes.reduce((acc, dataType) => {
+        /* Clone data types. */
+        const dataTypesClone = Array.from(dataTypes);
+
+        return dataTypesClone.reduce((acc, dataType) => {
 
             if ( dataType ) {
 
-                const dataTypeSearchStr = dataType.replace(/(-|\s)/g, "_");
+                const dataTypeSearchStr = dataType.replace(/(\/|,|-|\s|\(|\))/g, "_");
 
                 /* Add dataType to accumulator. */
-                acc = `${acc} ${dataTypeSearchStr}`;
+                acc.push(dataTypeSearchStr);
             }
 
             return acc;
-        }, "");
+        }, dataTypesClone);
     }
 
-    return "";
+    return [];
 };
 
 /**
  * Returns the study's diseases.
  * Facilitates the indexing of diseases into a searchable text or checkbox value.
- * Replaces any white space, commas, hyphens or brackets with an underscore.
+ * Replaces any white space, commas, hyphens or brackets or slash with an underscore.
  * e.g. "Hearing Loss, Sensorineural" returns "Hearing_Loss__Sensorineural".
  *
  * @param diseases
@@ -156,7 +159,7 @@ const getIndexFieldDiseases = function getIndexFieldDiseases(diseases, consortiu
 
         return diseasesClone.reduce((acc, disease) => {
 
-            const diseaseStr = disease.replace(/(,|-|\s|\(|\))/g, "_");
+            const diseaseStr = disease.replace(/(\/|,|-|\s|\(|\))/g, "_");
             acc.push(diseaseStr);
 
             return acc;

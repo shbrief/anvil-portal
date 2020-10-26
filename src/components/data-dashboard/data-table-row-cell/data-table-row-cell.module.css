@@ -49,9 +49,14 @@
     width: 200px;
 }
 
+/* NCPI table - "dataTypes" */
+[id^="ncpi"] td[id^="dataTypes"] {
+    max-width: 158px;
+}
+
 /* Studies table - "dataTypes" */
 [id^="studies"] td[id^="dataTypes"] {
-    width: 85px;
+    width: 92px;
 }
 
 /* Studies table - "dataTypes" */

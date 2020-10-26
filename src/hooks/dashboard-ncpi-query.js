@@ -12,6 +12,7 @@ export const DashboardNCPIStaticQuery = () => {
                   tooltipValue
                 }
                 consentShortNames
+                dataTypes
                 dbGapIdAccession
                 diseases
                 gapId {
