@@ -16,17 +16,15 @@ import DataSearchInput from "../data-search-input/data-search-input";
 // Styles
 import compStyles from "./data-search.module.css";
 
-class DataSearch extends React.Component {
+function DataSearch() {
 
-    render() {
-        return (
-            <div className={compStyles.search}>
-                <DataSearchInput/>
-                <DataSearchCheckboxes/>
-                <DataSearchEmptyResults/>
-            </div>
-        )
-    };
+    return (
+        <div className={compStyles.search}>
+            <DataSearchInput/>
+            <DataSearchCheckboxes/>
+            <DataSearchEmptyResults/>
+        </div>
+    )
 }
 
 export default DataSearch;

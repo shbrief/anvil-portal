@@ -13,32 +13,16 @@ import React, {useContext} from "react";
 import Checkboxes from "../../checkboxes/checkboxes";
 import ContextDashboardFilter from "../context-dashboard-filter/context-dashboard-filter";
 
-class DataSearchCheckboxes extends React.Component {
-
-    shouldComponentUpdate(_) {
-
-        const {checkboxGroups} = this.props;
-
-        /* Update component if checkboxGroups is undefined. */
-        return checkboxGroups.length === 0;
-    }
-
-    render() {
-        const {checkboxGroups} = this.props;
-        return (
-            checkboxGroups.map((checkboxGroup, c) =>
-                <Checkboxes key={c}
-                            checkboxes={checkboxGroup.checkboxes}
-                            groupName={checkboxGroup.groupName}/>)
-        )
-    };
-}
-
-export default () => {
+function DataSearchCheckboxes() {
 
     const {checkboxGroups} = useContext(ContextDashboardFilter);
 
     return (
-        <DataSearchCheckboxes checkboxGroups={checkboxGroups}/>
+        checkboxGroups.map((checkboxGroup, c) =>
+            <Checkboxes key={c}
+                        checkboxes={checkboxGroup.checkboxes}
+                        groupName={checkboxGroup.groupName}/>)
     )
 }
+
+export default DataSearchCheckboxes;

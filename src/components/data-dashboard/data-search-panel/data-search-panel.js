@@ -13,14 +13,14 @@ import compStyles from "./data-search-panel.module.css";
 
 let classNames = require("classnames");
 
-class DataSearchPanel extends React.Component {
+function DataSearchPanel(props) {
 
-    render() {
-        const {children, error} = this.props;
-        return (
-            <div className={classNames({[compStyles.error]: error}, compStyles.panel)}>{children}</div>
-        )
-    };
+    const {children, error} = props;
+    const classNamesPanel = classNames({[compStyles.error]: error}, compStyles.panel);
+
+    return (
+        <div className={classNamesPanel}>{children}</div>
+    )
 }
 
 export default DataSearchPanel;
